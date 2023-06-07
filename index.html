@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Assignment</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1  >Function Assignment</h1>
+    </header>
+    <div class="day1"><h2>Day 1</h2></div>
+
+    <div class="container">
+        <h2 class="Question">Q1.	Create a function with zero parameter having a console statement</h2>
+        <pre class="Answer">Ans.    function greeting(){
+            console.log("Good Morning Prepbytes")
+         }
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2 class="Question">Q2.	Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"	</h2>
+        <pre class="Answer">Ans.   function sum(num1 , num2){
+            return num1 + num2;
+        }
+        
+        console.log(sum(3 ,4));
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2 class="Question">Q3.	Create one Arrow Function</h2>
+        <pre class="Answer">Ans.   let welcomeMessage = ()=>{
+            console.log("Welcome to Prepbytes")    
+        }
+        
+        </pre>
+    </div>
+
+    <div class="container">
+        <h2 class="Question"><pre> Q4.	"Print output: 
+            var x = 21;
+            var girl = function () {
+                console.log(x);
+                var x = 20;
+            };
+            girl ();" </pre></h2>
+            <p class="question4 Answer">  In this function, x is being redeclared inside the function scope so a new memory will be allocated for x inside function scope during memory allocation. And at the time of execution console line will run before the value of x is assigned. So Hoisting will be there and the Answer will be <span>UNDEFINED</span> 
+            </p>
+    </div>
+
+
+    <div class="container">
+        <h2 class="Question"><pre>Q5.	"Print output: 
+            var x = 21;
+            girl ();
+            console.log(x)
+            function girl() {
+                console.log(x);
+                var x = 20;
+            };
+            "</pre></h2>
+        <p class="question5 Answer"> Inside global memory allocation,  x and the function girl will be declared and at the time of execution girl function will be executed first and give answer <span>UNDEFINED</span> due to Hoisting inside function girl and after that console line will be executed and give answer <span>21</span></p>
+            
+    </div>
+
+    <div class="container">
+        <h2 class="Question"><pre>Q.6	"Print output
+
+            var x = 21;
+            a();
+            b();
+            
+              function a() {
+                
+               x = 20;
+              console.log(x);
+            };
+             function b() {
+                
+                x = 40;
+               console.log(x);
+            };"
+        </pre></h2>
+        <p  class="Answer"> Output is <span>20</span> and <span>40</span>  
+            First of all at the time of memory allocation in global scope x and function a and function b will be stored and for global execution value of x will be initialized 21 then function a will be called inside which value of x will be re-initialized as 20 and give output as 20 . Then function b will be called inside which value of x will again be re-initialized as 40 and output will be 40
+        </p>
+    </div>
+
+    <div class="container">
+        <h2 class="Question">Q7.	Write a function that accepts parameter n and returns factorial of n</h2>
+        <div class="question7" style="display: flex;">
+            <div class="box box1" ></div>
+            <div class="box box2" ></div>
+            <div class="box box3" ></div>
+        </div>
+        <pre class="Answer">function factorial(n){
+            if(n < 0){
+                console.log(`Error: The value of n can not be zero`);
+            }
+            if(n === 0){
+                console.log(`The factorial of 0 is : 1`);
+            }
+            else{
+            let fact = 1;
+                
+                for(let i=1; i<=n ; i++){
+                    fact *= i;
+                }
+                console.log(`The factorial of ${n} is ${fact}`);
+            }
+         }
+         factorial(4);</pre>
+         <p class="Answer"> Output for value of n = 4 will be <span>24</span></p>
+    </div>
+
+   
+    
+    <div class="container">
+        
+        <a class="Answer" href="./day2.html"> Day 2</a>
+    </div>
+
+
+</body>
+</html>
